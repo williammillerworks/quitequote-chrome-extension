@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "quiet quote",
+  "version": "0.1.1",
+  "description": "A calm, minimal new tab that shows one meaningful quote a day.",
+  "permissions": [],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "quotes-database.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "public/icon16.png",
+    "48": "public/icon48.png",
+    "128": "public/icon128.png"
+  },
+  "author": "William Miller",
+  "homepage_url": "https://williammillerworks.replit.app"
+}

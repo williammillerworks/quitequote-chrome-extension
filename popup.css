@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "ss03" on;
+  background-color: #faf9f5;
+  color: #111;
+  width: 400px;
+  min-height: 300px;
+  position: relative;
+}
+
+.quote-container {
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  text-align: center;
+}
+
+.date {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.quote {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #111;
+  margin: 0 auto 1.5rem auto;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.source {
+  font-size: 0.75rem;
+  color: #888;
+  line-height: 1.4;
+}
+
+.source a {
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.source a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.actions {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #111;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+/* Loading state */
+.quote.loading {
+  opacity: 0.6;
+}
+
+/* Copy feedback */
+.copy-feedback {
+  position: absolute;
+  bottom: 4rem;
+  right: 1rem;
+  background: #111;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.copy-feedback.show {
+  opacity: 1;
+  transform: translateY(0);
+}
