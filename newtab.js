@@ -11,7 +11,7 @@ async function loadQuotesDatabase() {
     return [
       {
         id: 1,
-        text: "Learn how to learn from those who disagree with you.",
+        text: "Learn how to learn from those who disagree with you",
         source: "68 Bits of Unsolicited Advice",
         author: "Kevin Kelly",
         url: "https://www.youtube.com/watch?v=Zz70rcguxwk",
