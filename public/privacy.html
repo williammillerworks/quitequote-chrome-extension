@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <title>Privacy Policy – quiet quote</title>
+
+  <!-- SEO & Social Metadata -->
+  <meta name="description" content="Privacy Policy for quiet quote Chrome Extension - No data collection, fully local storage." />
+  <meta name="author" content="William Miller" />
+  <meta name="keywords" content="quiet quote, privacy policy, Chrome extension, William Miller" />
+
+  <!-- Inter font full feature -->
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <style>
+    html {
+      font-family: 'Inter', sans-serif;
+      font-feature-settings: "cv11", "ss01";
+      background-color: #ffffff;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration-line: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 4px;
+      text-decoration-color: #000000;
+      color: #000000;
+      transition: opacity 0.2s ease;
+    }
+
+    a:hover {
+      opacity: 0.6;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="antialiased px-6 sm:px-12 py-12 relative min-h-screen flex flex-col justify-center">
+
+  <!-- Fixed Logotype -->
+  <div class="absolute top-6 left-6 text-sm tracking-tight font-medium select-none text-gray-400">
+    William Miller
+  </div>
+
+  <main class="max-w-2xl mx-auto space-y-12 text-left">
+    <!-- Privacy Policy Section -->
+    <section class="space-y-6 fade-in" id="privacy">
+      <h1 class="text-3xl font-bold tracking-tight">Privacy Policy for "quiet quote"</h1>
+      <p>This Chrome Extension does not collect, store, transmit, or use any personal or sensitive user data.</p>
+      <p>All content is stored locally and runs entirely on your device. There is no user tracking, analytics, or cloud syncing involved.</p>
+      <p>If you have any questions, feel free to contact <a href="mailto:william.miller.works@gmail.com" class="underline decoration-[1px] underline-offset-4 text-black">william.miller.works@gmail.com</a>.</p>
+    </section>
+  </main>
+
+  <script>
+    // Basic scroll-triggered fade-in effect
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {threshold: 0.3}
+    );
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+
+</html>
